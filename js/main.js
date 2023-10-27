@@ -96,7 +96,6 @@ function addToCart(key) {
     itemsInCart.add(itemsInPage[key]);
   }
   greenLightNotifi("The product has been added to the cart.");
-
   reloadCart();
 }
 
@@ -105,16 +104,16 @@ function reloadCart() {
   for (const item of itemsInCart) {
     const content = `
     <div class="item">
-    <div class="img"><img src="${item.img}" alt=""></div>
-    <div class="add-more">
-    <div class="increment">+</div>
+      <div class="img"><img src="${item.img}" alt=""></div>
+      <div class="add-more">
+        <div class="increment">+</div>
           <div class="count">1</div>
           <div class="decrement">-</div>
         </div>
-        <div class="title">${item.title}</div>
-        <div class="total-price">$${item.price}</div>
-        <button>Pay</button>
-      </div>  
+      <div class="title">${item.title}</div>
+      <div class="total-price">$${item.price}</div>
+      <button>Pay</button>
+    </div>  
       `;
 
     document.querySelector("div .itemsList").innerHTML += content;
@@ -133,28 +132,28 @@ function reloadCart() {
         v.addEventListener("click", () => {
           decrementProduct(i);
         });
-
-        document
-          .querySelectorAll(".cart .list .item button")
-          .forEach((v, i) => {
-            v.addEventListener("click", () => {
-              payDone(i);
-            });
-          });
       });
   }
+  document.querySelectorAll(".cart .list .item button").forEach((v, i) => {
+    v.addEventListener("click", () => {
+      payDone(i);
+    });
+  });
 }
 
 function incrementProduct(key) {
   let count = document.querySelectorAll(".cart .list .item .add-more .count");
+  let price = document.querySelectorAll(".itemsList .item .total-price");
   count[key].innerHTML++;
 }
 
-function decrementProduct(key) {
+function decrementProduct(key, number) {
   let count = document.querySelectorAll(".cart .list .item .add-more .count");
+  let price = document.querySelectorAll(".itemsList .item .total-price");
   if (count[key].innerHTML === "1") {
     return;
   }
+  price[key].innerHTML = parseInt(price[key].innerHTML) - parseInt(number);
   count[key].innerHTML--;
 }
 
@@ -172,6 +171,6 @@ function decrementProduct(key) {
 
 function payDone(key) {
   const items = document.querySelectorAll("div .itemsList .item");
-  greenLightNotifi("Purchase completed successfully.");
-  items[key].remove();
+  greenLightNotifi("You have been purshased this product");
+  items[key].style.display = "none";
 }
