@@ -149,11 +149,9 @@ function incrementProduct(key) {
 
 function decrementProduct(key, number) {
   let count = document.querySelectorAll(".cart .list .item .add-more .count");
-  let price = document.querySelectorAll(".itemsList .item .total-price");
   if (count[key].innerHTML === "1") {
     return;
   }
-  price[key].innerHTML = parseInt(price[key].innerHTML) - parseInt(number);
   count[key].innerHTML--;
 }
 
