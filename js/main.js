@@ -1,5 +1,5 @@
 import "/css/main.css";
-import {message} from "/js/alert"
+import { greenLightNotifi } from "/js/notifications";
 const allPages = document.querySelectorAll("nav ul li a");
 const sliders = document.querySelectorAll("main .slider .bullets li");
 const category = document.querySelectorAll("main .shop .category li");
@@ -95,7 +95,7 @@ function addToCart(key) {
   if (itemsInCart !== null) {
     itemsInCart.add(itemsInPage[key]);
   }
-  message("The product has been added to the cart.");
+  greenLightNotifi("The product has been added to the cart.");
 
   reloadCart();
 }
@@ -134,11 +134,13 @@ function reloadCart() {
           decrementProduct(i);
         });
 
-        document.querySelectorAll(".cart .list .item button").forEach((v, i)=> {
-          v.addEventListener("click", ()=> {
-            payDone(i)
-          })
-        });
+        document
+          .querySelectorAll(".cart .list .item button")
+          .forEach((v, i) => {
+            v.addEventListener("click", () => {
+              payDone(i);
+            });
+          });
       });
   }
 }
@@ -170,9 +172,6 @@ function decrementProduct(key) {
 
 function payDone(key) {
   const items = document.querySelectorAll("div .itemsList .item");
-  message("Purchase completed successfully.");
+  greenLightNotifi("Purchase completed successfully.");
   items[key].remove();
-
-  console.log("length:" + items.length);
-  console.log(key);
 }

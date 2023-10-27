@@ -1,6 +1,6 @@
 let distance = 25;
 
-export function message(message = "Please add a message") {
+export function greenLightNotifi(message = "Please add a message") {
   let alertHtml = `
     <i class="fa-solid fa-circle-check"></i>
     <div class="message">${message}</div>
