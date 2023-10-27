@@ -1,0 +1,214 @@
+[
+  {
+    "id": 1,
+    "img": "/images/items/menClothing/f1_optimized.jpg",
+    "title": "Shirt",
+    "type": "Men's Clothing",
+    "rate": 3,
+    "price": 25
+  },
+  {
+    "id": 2,
+    "img": "/images/items/menClothing/f5_optimized.jpg",
+    "title": "Shirt",
+    "type": "Men's Clothing",
+    "rate": 5,
+    "price": 49
+  },
+  {
+    "id": 3,
+    "img": "/images/items/gaming/laptop_optimized.jpg",
+    "title": "Gaming Laptop",
+    "type": "Gaming",
+    "rate": 5,
+    "price": 3199
+  },
+  {
+    "id": 4,
+    "img": "/images/items/gaming/keyboard_optimized.jpg",
+    "title": "Gaming Keyboard",
+    "type": "Gaming",
+    "rate": 5,
+    "price": 69
+  },
+  {
+    "id": 5,
+    "img": "/images/items/elctronics/1700wx1700h_608250_main_optimized.jpg",
+    "title": "Crystal UHD",
+    "type": "Electronics",
+    "rate": 5,
+    "price": 1199
+  },
+  {
+    "id": 6,
+    "img": "/images/items/elctronics/1700wx1700h_614782_main_optimized.jpg",
+    "title": "LG UHD",
+    "type": "Electronics",
+    "rate": 5,
+    "count": 0,
+
+    "price": 1699
+  },
+  {
+    "id": 7,
+    "img": "/images/items/gaming/716swoivxds_optimized.jpg",
+    "title": "MSI Gaming Laptop",
+    "type": "Gaming",
+    "rate": 5,
+    "count": 0,
+
+    "price": 2399
+  },
+  {
+    "id": 8,
+    "img": "/images/items/Jewelery/j2_optimized.jpg",
+    "title": "Ring",
+    "type": "Jewelery",
+    "rate": 5,
+    "price": 799
+  },
+  {
+    "id": 9,
+    "img": "/images/items/Jewelery/j3_optimized.jpg",
+    "title": "Necklace",
+    "type": "Jewelery",
+    "rate": 5,
+    "price": 499
+  },
+  {
+    "id": 10,
+    "img": "/images/items/Jewelery/j4_optimized.jpg",
+    "title": "Ring",
+    "type": "Jewelery",
+    "rate": 5,
+    "price": 499
+  },
+  {
+    "id": 11,
+    "img": "/images/items/elctronics/iphone-14-pro-max-deep-purple_optimized.jpg",
+    "title": "Iphone 14 pro max",
+    "type": "Electronics",
+    "rate": 5,
+    "price": 1399
+  },
+  {
+    "id": 12,
+    "img": "/images/items/elctronics/cmaera1_optimized.png",
+    "title": "Canon camera",
+    "type": "Electronics",
+    "rate": 5,
+    "price": 2999
+  },
+  {
+    "id": 13,
+    "img": "/images/items/elctronics/e1_optimized.jpg",
+    "title": "Apple watch",
+    "type": "Electronics",
+    "rate": 5,
+    "price": 399
+  },
+  {
+    "id": 14,
+    "img": "/images/items/elctronics/iphone-15-pro-max-2_optimized.jpg",
+    "title": "Iphone 15 pro max",
+    "type": "Electronics",
+    "rate": 5,
+    "price": 1499
+  },
+  {
+    "id": 15,
+    "img": "/images/items/Sports/s1_optimized.jpg",
+    "title": "Football",
+    "type": "Sports",
+    "rate": 5,
+    "price": 39
+  },
+  {
+    "id": 16,
+    "img": "/images/items/Sports/s2_optimized.jpg",
+    "title": "Basketball",
+    "type": "Sports",
+    "rate": 5,
+    "price": 69
+  },
+  {
+    "id": 17,
+    "img": "/images/items/Sports/s3_optimized.jpg",
+    "title": "Blue gloves",
+    "type": "Sports",
+    "rate": 5,
+    "price": 99
+  },
+  {
+    "id": 18,
+    "img": "/images/items/Sports/s4_optimized.jpg",
+    "title": "Amercan ball",
+    "type": "Sports",
+    "rate": 5,
+    "price": 79
+  },
+  {
+    "id": 19,
+    "img": "/images/items/gaming/61hedllvo2l_optimized.jpg",
+    "title": "Gaming Mouse & Keyboard",
+    "type": "Gaming",
+    "rate": 5,
+    "price": 69
+  },
+  {
+    "id": 20,
+    "img": "/images/items/gaming/61obvvrz61l_optimized.jpg",
+    "title": "Lazer Mouse & Keyboard",
+    "type": "Gaming",
+    "rate": 5,
+    "price": 69
+  },
+  {
+    "id": 21,
+    "img": "/images/items/gaming/713w7csxn0l_optimized.jpg",
+    "title": "Gaming Pack",
+    "type": "Gaming",
+    "rate": 5,
+    "price": 69
+  },
+  {
+    "id": 22,
+    "img": "/images/items/gaming/71d6beasu4l_optimized._ac_sl1500_.jpg",
+    "title": "Gaming Pack",
+    "type": "Gaming",
+    "rate": 5,
+    "price": 69
+  },
+  {
+    "id": 23,
+    "img": "/images/items/gaming/image24_optimized.jpeg",
+    "title": "Gaming Laptop",
+    "type": "Gaming",
+    "rate": 5,
+    "price": 2999
+  },
+  {
+    "id": 24,
+    "img": "/images/items/gaming/71m-czevyfs_optimized.jpg",
+    "title": "Gaming Pack",
+    "type": "Gaming",
+    "rate": 5,
+    "price": 69
+  },
+  {
+    "id": 25,
+    "img": "/images/items/gaming/image15_optimized.jpeg",
+    "title": "Gaming Laptop",
+    "type": "Gaming",
+    "rate": 5,
+    "price": 2999
+  },
+  {
+    "id": 26,
+    "img": "/images/items/gaming/71woe2hqrzl_optimized.jpg",
+    "title": "Gaming Pack",
+    "type": "Gaming",
+    "rate": 5,
+    "price": 69
+  }
+]

@@ -1,0 +1,43 @@
+.alert {
+    user-select: none;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    width: 350px;
+    height: 60px;
+    background-color: hsl(143, 85%, 96%);
+    border: 1px solid hsl(145, 92%, 91%);
+    box-shadow: 0px 0px 7px 2px hsl(143deg 1.49% 75.91% / 40%);
+    z-index: 9999999;
+    left: 50%;
+    right: 50%;
+    top: -80px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    transition: 0.3s ease-out;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -ms-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
+}
+
+.alert i {
+    color: hsl(140, 100%, 27%);
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.alert .message {
+    color: hsl(140, 100%, 27%);
+    font-size: 15px;
+    font-weight: 600;
+}

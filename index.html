@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Best Shop un the world" />
+    <!-- CSS Style Sheet -->
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/cart.css" />
+    <link rel="stylesheet" href="/css/alert.css" />
+    <!-- Normalize -->
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <!-- Page Icon -->
+    <link
+      rel="shortcut icon"
+      href="/images/icons/favicon.png"
+      type="image/x-icon"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Amazon</title>
+  </head>
+
+  <body>
+    <section class="shopping">
+      <nav>
+        <div class="icon">
+          <!-- <object data="/images/icons/icon.svg" width="40px" height="40px"
+                    aria-labelledby="logo"></object> -->
+          A
+        </div>
+        <ul>
+          <li>
+            <a class="active" href="#home"
+              ><i class="fa-solid fa-house" style="pointer-events: none"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#cart"
+              ><i
+                class="fa-solid fa-cart-shopping"
+                style="pointer-events: none"
+              ></i
+            ></a>
+          </li>
+          <li>
+            <a href="#Favortite"
+              ><i class="fa-solid fa-bookmark" style="pointer-events: none"></i
+            ></a>
+          </li>
+          <li>
+            <a href="#newItems"
+              ><i class="fa-solid fa-clock" style="pointer-events: none"></i
+            ></a>
+          </li>
+        </ul>
+        <div class="profile">
+          <img src="/images/profileImg/ahmedk05a_optimized.png" alt="" />
+        </div>
+      </nav>
+      <main>
+        <header>
+          <div class="lang-and-search">
+            <div class="search">
+              <input type="text" id="search" placeholder="Search..." />
+            </div>
+            <div class="lang">
+              English <i class="fa-solid fa-angle-down"></i>
+              <ul>
+                <li>English</li>
+                <li>Arabic</li>
+              </ul>
+            </div>
+          </div>
+          <div class="logo">
+            <object
+              data="/images/icons/logo.svg"
+              width="120px"
+              height="120px"
+            ></object>
+          </div>
+        </header>
+        <!-- <section class="slider">
+                <ul class="bullets">
+                    <li class="active" ></li>
+                    <li onclick="test()"></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div class="ads">
+                    <div class="ad">
+                        <img src="/images/slides/one_optimized.jpg" alt="ad">
+                    </div>
+                </div>
+            </section> -->
+        <section class="shop">
+          <ul class="category">
+            <li class="active">All Departments</li>
+            <li>Electronics</li>
+            <li>Gaming</li>
+            <li>Jewelery</li>
+            <li>Men's Clothing</li>
+            <!-- <li>Woman's Clothing</li> -->
+            <li>Sports</li>
+          </ul>
+          <div class="items">
+            <!-- <div class="item" tabindex="2">
+                        <div class="image"><img src="../images//items/n3_optimized.jpg" alt=""></div>
+                        <div class="type">Men's Clothing</div>
+                        <div class="title">Mens Casual Shirt</div>
+                        <div class="rate">
+                            <ul>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-solid fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                                <li><i class="fa-regular fa-star"></i></li>
+                            </ul>
+                        </div>
+                        <div class="price">$100</div>
+                        <button>Buy</button>
+                    </div> -->
+          </div>
+        </section>
+      </main>
+    </section>
+
+    <!-- Cart section -->
+
+    <section class="cart hidden">
+      <div class="header">
+        <a href="/index.html">Back</a>
+        <h1>Cart</h1>
+      </div>
+      <div class="list">
+        <div class="itemsList">
+          <p style="font-weight: 600; font-size: 3rem">No Products</p>
+        </div>
+      </div>
+    </section>
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>
