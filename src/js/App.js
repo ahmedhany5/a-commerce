@@ -1,11 +1,13 @@
 import "/css/main.css";
-import { greenLightNotifi } from "/js/notifications";
+import showProduct from "./productShow";
+import addProduct from "./addToCart";
+import searchSystem from "./searchSystem";
 const allPages = document.querySelectorAll("nav ul li a");
 const sliders = document.querySelectorAll("main .slider .bullets li");
 const category = document.querySelectorAll("main .shop .category li");
 const items = document.querySelector("main .shop .items");
 const itemsInPage = [];
-const itemsInCart = new Set();
+let itemsInCart = [];
 
 function addToPage() {
   let index = 0;
@@ -42,6 +44,8 @@ function addToPage() {
       });
     });
   });
+
+  searchSystem();
 }
 
 async function getItems() {
@@ -52,8 +56,6 @@ async function getItems() {
       addToPage();
     });
 }
-
-getItems();
 
 changeOnclick(allPages);
 changeOnclick(sliders);
@@ -93,82 +95,38 @@ category.forEach((el) => {
 
 function addToCart(key) {
   if (itemsInCart !== null) {
-    itemsInCart.add(itemsInPage[key]);
+    itemsInCart.push(itemsInPage[key]);
+    itemsInCart = itemsInCart.filter((v, i) => itemsInCart.indexOf(v) === i);
   }
-  greenLightNotifi("The product has been added to the cart.");
-  reloadCart();
+  showProduct(key, itemsInPage);
+  addProduct(itemsInCart);
 }
 
-function reloadCart() {
-  document.querySelector("div .itemsList").innerHTML = "";
-  for (const item of itemsInCart) {
-    const content = `
-    <div class="item">
-      <div class="img"><img src="${item.img}" alt=""></div>
-      <div class="add-more">
-        <div class="increment">+</div>
-          <div class="count">1</div>
-          <div class="decrement">-</div>
-        </div>
-      <div class="title">${item.title}</div>
-      <div class="total-price">$${item.price}</div>
-      <button>Pay</button>
-    </div>  
-      `;
-
-    document.querySelector("div .itemsList").innerHTML += content;
-
-    document
-      .querySelectorAll(".cart .list .item .increment")
-      .forEach((v, i) => {
-        v.addEventListener("click", () => {
-          incrementProduct(i);
-        });
-      });
-
-    document
-      .querySelectorAll(".cart .list .item .decrement")
-      .forEach((v, i) => {
-        v.addEventListener("click", () => {
-          decrementProduct(i);
-        });
-      });
-  }
-  document.querySelectorAll(".cart .list .item button").forEach((v, i) => {
-    v.addEventListener("click", () => {
-      payDone(i);
+allPages.forEach((e) => {
+  if (e.attributes.href.value === "#cart") {
+    e.addEventListener("click", () => {
+      document.querySelector("body .shopping main").classList.add("hidden");
+      document.querySelector("body .shopping").classList.add("edit");
+      document.querySelector(".cart").classList.remove("hidden");
+      document.querySelector("body .product-show").classList.add("hide");
     });
-  });
-}
-
-function incrementProduct(key) {
-  let count = document.querySelectorAll(".cart .list .item .add-more .count");
-  let price = document.querySelectorAll(".itemsList .item .total-price");
-  count[key].innerHTML++;
-}
-
-function decrementProduct(key, number) {
-  let count = document.querySelectorAll(".cart .list .item .add-more .count");
-  if (count[key].innerHTML === "1") {
-    return;
   }
-  count[key].innerHTML--;
-}
+});
 
-(() => {
-  allPages.forEach((e) => {
-    if (e.attributes.href.value === "#cart") {
-      e.addEventListener("click", () => {
-        document.querySelector(".shopping").classList.add("hidden");
-        document.querySelector(".cart").classList.remove("hidden");
-        document.querySelector(".cart").classList.add("show");
-      });
-    }
+document
+  .querySelector(".cart .header a")
+  .addEventListener("click", async () => {
+    const homeShow = await import("./homeShow").then(
+      (module) => module.homeShow
+    );
+
+    homeShow();
   });
-})();
 
-function payDone(key) {
-  const items = document.querySelectorAll("div .itemsList .item");
-  greenLightNotifi("You have been purshased this product");
-  items[key].style.display = "none";
-}
+
+document.querySelector("body .menu").addEventListener("click", ()=> {
+  let nav = document.querySelector("body nav")
+  nav.classList.toggle("show")
+})
+
+getItems();

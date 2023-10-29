@@ -1,4 +1,5 @@
-.alert {
+.green-alert,
+.red-alert {
     user-select: none;
     position: fixed;
     display: flex;
@@ -31,14 +32,32 @@
     -o-transition: 0.3s ease-out;
 }
 
-.alert i {
+
+.red-alert {
+    background-color: hsl(0, 85%, 96%);
+    border: 1px solid hsl(0, 92%, 91%);
+}
+
+.green-alert i {
     color: hsl(140, 100%, 27%);
     font-size: 20px;
     margin-right: 15px;
 }
 
-.alert .message {
+.red-alert i {
+    color: hsl(0, 100%, 27%);
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.green-alert .message {
     color: hsl(140, 100%, 27%);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.red-alert .message {
+    color: hsl(0, 100%, 27%);
     font-size: 15px;
     font-weight: 600;
 }

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/cart.css" />
     <link rel="stylesheet" href="/css/notifications.css" />
+    <link rel="stylesheet" href="/css/productShow.css" />
     <!-- Normalize -->
     <link rel="stylesheet" href="/css/normalize.css" />
     <!-- Page Icon -->
@@ -24,10 +25,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Amazon</title>
+    <title>A-shop</title>
   </head>
 
   <body>
+    <div class="menu"><i class="fa-solid fa-bars"></i></div>
     <section class="shopping">
       <nav>
         <div class="icon">
@@ -37,12 +39,12 @@
         </div>
         <ul>
           <li>
-            <a class="active" href="#home"
+            <a id="home" class="active" href="./index.html"
               ><i class="fa-solid fa-house" style="pointer-events: none"></i
             ></a>
           </li>
           <li>
-            <a href="#cart"
+            <a id="cart" href="#cart"
               ><i
                 class="fa-solid fa-cart-shopping"
                 style="pointer-events: none"
@@ -70,21 +72,21 @@
             <div class="search">
               <input type="text" id="search" placeholder="Search..." />
             </div>
-            <div class="lang">
+            <!-- <div class="lang">
               English <i class="fa-solid fa-angle-down"></i>
               <ul>
                 <li>English</li>
                 <li>Arabic</li>
               </ul>
-            </div>
+            </div> -->
           </div>
-          <div class="logo">
+          <!-- <div class="logo">
             <object
               data="/images/icons/logo.svg"
               width="120px"
               height="120px"
             ></object>
-          </div>
+          </div> -->
         </header>
         <!-- <section class="slider">
                 <ul class="bullets">
@@ -110,41 +112,51 @@
             <!-- <li>Woman's Clothing</li> -->
             <li>Sports</li>
           </ul>
-          <div class="items">
-            <!-- <div class="item" tabindex="2">
-                        <div class="image"><img src="../images//items/n3_optimized.jpg" alt=""></div>
-                        <div class="type">Men's Clothing</div>
-                        <div class="title">Mens Casual Shirt</div>
-                        <div class="rate">
-                            <ul>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-solid fa-star"></i></li>
-                                <li><i class="fa-regular fa-star"></i></li>
-                                <li><i class="fa-regular fa-star"></i></li>
-                            </ul>
-                        </div>
-                        <div class="price">$100</div>
-                        <button>Buy</button>
-                    </div> -->
-          </div>
+          <div class="items"></div>
         </section>
       </main>
     </section>
+
+    <!-- <div class="product-show hide">
+      <div class="image">
+        <img
+          src="/public/images/items/gaming/61hedllvo2l_optimized.jpg"
+          alt=""
+        />
+      </div>
+      <div class="right">
+        <div class="info">
+          <div class="title">test</div>
+          <div class="price">$100</div>
+          <div class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore unde adipisci, aliquid incidunt m?</div>
+        </div>
+        <button id="buy">Buy</button>
+        <div class="comments">
+          <p>no comments</p>
+        </div>
+        <div class="add-comments">
+          <input type="text" placeholder="Type your comment here" />
+          <button id="comment">Comment</button>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="product-show hide"></div>
 
     <!-- Cart section -->
 
     <section class="cart hidden">
       <div class="header">
-        <a href="/index.html">Back</a>
+        <a href="#home">Back</a>
         <h1>Cart</h1>
       </div>
       <div class="list">
         <div class="itemsList">
-          <p style="font-weight: 600; font-size: 3rem">No Products</p>
         </div>
       </div>
     </section>
-    <script src="./js/main.js" type="module"></script>
+    <script src="/src/js/App.js" type="module"></script>
+    <script src="/src/js/productShow.js" type="module"></script>
+    
   </body>
 </html>

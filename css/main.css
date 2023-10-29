@@ -19,6 +19,29 @@ body {
     width: 100%;
     height: 100%;
     background-color: #020817;
+    position: relative;
+}
+
+.menu {
+    display: none;
+}
+
+nav.show {
+    left: 0;
+}
+
+
+@media (max-width: 568px) {
+    .menu {
+        display: block;
+        color: #5684c4;
+        position: fixed;
+        left: 18px;
+        top: 16px;
+        z-index: 99999;
+        font-size: 35px;
+        cursor: pointer;
+    }
 }
 
 .shopping.show {
@@ -34,7 +57,8 @@ nav {
     position: fixed;
     width: 130px;
     height: 100%;
-    /* background-color: #fff; */
+    /*background-color: #fff;
+    */
     background-color: #0f172a;
     display: flex;
     align-items: center;
@@ -45,12 +69,38 @@ nav {
     user-select: none;
     top: 0;
     left: 0;
+    z-index: 9999;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
 }
+
+@media (max-width: 768px) {
+    nav {
+        width: 100px;
+    }
+}
+
+@media (max-width: 568px) {
+    nav {
+        left: -100px;
+    }
+}
+
+
 
 nav .icon {
     font-size: 45px;
     color: white;
     cursor: pointer;
+}
+
+@media (max-width: 568px) {
+    nav .icon {
+        margin-top: 25px
+    }
 }
 
 nav ul {
@@ -103,7 +153,8 @@ nav ul li span {
     font-weight: bold;
 }
 
-nav ul li a:hover, nav ul li a.active {
+nav ul li a:hover,
+nav ul li a.active {
     /* background-color: #dfdfdf; */
     background-color: #1E293B;
 }
@@ -126,6 +177,14 @@ nav .profile img {
     height: 100%;
     padding: 20px;
     margin-left: 100px;
+}
+
+
+
+@media (max-width: 568px) {
+    .shopping {
+        margin-left: 0;
+    }
 }
 
 header {
@@ -154,6 +213,12 @@ header .search input {
     text-indent: 30px;
     width: 300px;
     height: 50px;
+}
+
+@media (max-width: 568px) {
+    header .search input {
+        width: 260px;
+    }
 }
 
 header .search input::placeholder {
@@ -317,6 +382,11 @@ main .shop {
     padding: 0 20px;
 }
 
+@media (max-width: 568px) {
+    main .shop {
+        padding: 0;
+    }
+}
 
 main .shop .category {
     display: flex;
@@ -324,6 +394,12 @@ main .shop .category {
     justify-content: center;
     margin-top: 50px;
     user-select: none;
+}
+
+@media (max-width: 768px) {
+    main .shop .category {
+        flex-direction: column;
+    }
 }
 
 main .shop .category li {
@@ -335,6 +411,19 @@ main .shop .category li {
     /* color: #949494; */
     color: #94A3B8;
     transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+    main .shop .category li {
+        margin-bottom: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+    main .shop .category li {
+        font-size: large;
+        text-align: center;
+    }
 }
 
 main .shop .category li::before {
@@ -369,6 +458,18 @@ main .shop .items {
     gap: 30px;
     margin-top: 100px;
     padding: 20px;
+}
+
+@media (max-width: 768px) {
+    main .shop .items {
+        place-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    main .shop .items {
+        place-items: center;
+    }
 }
 
 main .shop .items .item {
@@ -441,13 +542,13 @@ main .shop .items .item .price {
     font-size: 20px;
 }
 
-main .shop .items .item  button {
+main .shop .items .item button {
     border: none;
     cursor: pointer;
     /* background-color: black; */
     background-color: white;
     width: 100%;
-    border-radius: 10px ;
+    border-radius: 10px;
     padding: 15px 20px;
     /* color: white; */
     color: black;
@@ -456,4 +557,13 @@ main .shop .items .item  button {
 
 .hide {
     display: none;
+}
+
+main.hidden {
+    display: none;
+}
+
+.shopping.edit {
+    width: 0;
+    height: 0;
 }
